@@ -1,0 +1,19 @@
+name: SchematicTimer
+version: ${pluginVersion}
+main: me.dkim19375.schematictimer.SchematicTimer
+api-version: 1.16
+author: dkim19375
+description: Regenerate schematics
+depend:
+  - PlaceholderAPI
+  - WorldEdit
+
+softdepend:
+  - Multiverse-Core
+
+commands:
+  schematictimer:
+    description: Main command
+    aliases:
+      - st
+      - stimer
