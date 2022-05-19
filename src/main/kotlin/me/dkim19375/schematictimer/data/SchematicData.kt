@@ -36,6 +36,7 @@ data class SchematicData(
     var timeOfDays: Set<String> = setOf(
         "18:00"
     ),
+    var enabled: Boolean = true,
 ) {
     fun getSchematicFile(): File? = File(
         File(Bukkit.getPluginManager().getPlugin("WorldEdit")?.dataFolder, "schematics"),

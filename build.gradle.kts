@@ -11,7 +11,7 @@ plugins {
 val KT_VER = "1.6.21"
 
 group = "me.dkim19375"
-version = "1.0.0"
+version = "1.1.0"
 
 val basePackage = "me.dkim19375.${project.name.toLowerCase()}.libs"
 val fileName = tasks.shadowJar.get().archiveFileName.get()

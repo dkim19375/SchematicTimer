@@ -18,7 +18,9 @@
 
 package me.dkim19375.schematictimer.command
 
+import me.dkim19375.dkimcore.extension.getIgnoreCase
 import me.dkim19375.schematictimer.SchematicTimer
+import me.dkim19375.schematictimer.data.MainConfigData
 import me.dkim19375.schematictimer.util.ErrorMessages
 import me.dkim19375.schematictimer.util.Permissions
 import me.dkim19375.schematictimer.util.hasPermission
@@ -59,6 +61,26 @@ class SchematicTimerCmd(private val plugin: SchematicTimer) : CommandExecutor {
                 }
                 plugin.manager.lastTime = null
                 sender.sendMessage(Component.text("Successfully checked!").color(NamedTextColor.GREEN))
+            }
+            "place" -> {
+                if (!sender.hasPermission(Permissions.PLACE)) {
+                    sender.sendMessage(ErrorMessages.NO_PERMISSION)
+                    return true
+                }
+                if (args.size < 2) {
+                    sender.sendMessage(ErrorMessages.NOT_ENOUGH_PARAMS)
+                    return true
+                }
+                val schematicName = plugin.mainConfig.get(MainConfigData.SCHEMATICS).keys.getIgnoreCase(args[1])
+                val schematic = plugin.mainConfig.get(MainConfigData.SCHEMATICS)[schematicName]
+                if (schematic == null || schematicName == null) {
+                    sender.sendMessage(ErrorMessages.INVALID_REGION)
+                    return true
+                }
+                plugin.manager.generate(schematic)
+                sender.sendMessage(
+                    Component.text("Placing the schematic $schematicName!").color(NamedTextColor.GREEN)
+                )
             }
             else -> sender.sendMessage(ErrorMessages.INVALID_ARG)
         }

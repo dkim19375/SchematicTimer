@@ -17,3 +17,13 @@ commands:
     aliases:
       - st
       - stimer
+
+permissions:
+  schematictimer.command:
+    description: Main command
+  schematictimer.reload:
+    description: Reloads the plugin
+  schematictimer.check:
+    description: Checks for schematics
+  schematictimer.place:
+    description: Places a schematic

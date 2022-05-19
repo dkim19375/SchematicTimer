@@ -61,6 +61,9 @@ class SchematicManager(private val plugin: SchematicTimer) {
             lastTime = time
             val sentMessages = mutableMapOf<String, Set<Int>>()
             for ((name, region) in regions) {
+                if (!region.enabled) {
+                    continue
+                }
                 val messages = region.getMessageData(name, config)
                 if (region.isCurrent()) {
                     generate(region, messages, sentMessages)
@@ -140,17 +143,17 @@ class SchematicManager(private val plugin: SchematicTimer) {
         return list
     }
 
-    private fun generate(
+    fun generate(
         schematicData: SchematicData,
-        messages: Pair<String, MessageConfigData>?,
-        sentMessages: MutableMap<String, Set<Int>>,
+        messages: Pair<String, MessageConfigData>? = null,
+        sentMessages: MutableMap<String, Set<Int>>? = null,
     ) {
         if (messages != null) {
-            val set = sentMessages[messages.first] ?: emptySet()
+            val set = sentMessages?.get(messages.first) ?: emptySet()
             if (-1 !in set) {
                 messages.second.message.let { message ->
                     broadcastFormatted(message)
-                    sentMessages[messages.first] = set + -1
+                    sentMessages?.put(messages.first, set + -1)
                 }
             }
         }
