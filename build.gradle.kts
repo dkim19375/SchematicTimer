@@ -58,7 +58,6 @@ dependencies {
 
     compileOnly("me.clip:placeholderapi:2.11.1")
     compileOnly("org.jetbrains:annotations:23.0.0")
-    compileOnly("com.sk89q.worldedit:worldedit-bukkit:7.2.10")
 
     implementation("net.kyori:adventure-api:4.10.1")
     implementation("net.kyori:adventure-extra-kotlin:4.10.1")
@@ -67,7 +66,7 @@ dependencies {
     implementation("me.mattstudios:triumph-config:1.0.5-SNAPSHOT")
     implementation("net.kyori:adventure-text-serializer-plain:4.10.1")
     implementation("net.kyori:adventure-text-serializer-legacy:4.10.1")
-    implementation("io.github.dkim19375:dkim-bukkit-core:3.3.38") {
+    implementation("io.github.dkim19375:dkim-bukkit-core:3.3.39") {
         exclude(group = "org.jetbrains.kotlin")
     }
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$KT_VER") {
