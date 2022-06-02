@@ -61,7 +61,7 @@ dependencies {
     compileOnly("com.sk89q.worldedit:worldedit-bukkit:7.2.10")
 
     implementation("net.kyori:adventure-api:4.10.1")
-    implementation("net.kyori:adventure-extra-kotlin:4.10.1")
+    implementation("net.kyori:adventure-extra-kotlin:4.11.0")
     implementation("net.kyori:adventure-platform-bukkit:4.1.0")
     implementation("net.kyori:adventure-text-minimessage:4.11.0")
     implementation("me.mattstudios:triumph-config:1.0.5-SNAPSHOT")
