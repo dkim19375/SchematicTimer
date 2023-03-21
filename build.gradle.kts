@@ -58,7 +58,7 @@ dependencies {
 
     compileOnly("me.clip:placeholderapi:2.11.2")
     compileOnly("org.jetbrains:annotations:24.0.1")
-    compileOnly("com.sk89q.worldedit:worldedit-bukkit:7.2.13")
+    compileOnly("com.sk89q.worldedit:worldedit-bukkit:7.2.14")
 
     implementation("net.kyori:adventure-api:4.13.0")
     implementation("net.kyori:adventure-extra-kotlin:4.13.0")
