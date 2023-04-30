@@ -67,7 +67,7 @@ dependencies {
     implementation("me.mattstudios:triumph-config:1.0.5-SNAPSHOT")
     implementation("net.kyori:adventure-text-serializer-plain:4.13.1")
     implementation("net.kyori:adventure-text-serializer-legacy:4.13.1")
-    implementation("io.github.dkim19375:dkim-bukkit-core:3.3.45") {
+    implementation("io.github.dkim19375:dkim-bukkit-core:3.4.0") {
         exclude(group = "org.jetbrains.kotlin")
     }
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$KT_VER") {
