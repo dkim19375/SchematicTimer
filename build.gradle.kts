@@ -60,7 +60,7 @@ dependencies {
     compileOnly("org.jetbrains:annotations:24.0.1")
     compileOnly("com.sk89q.worldedit:worldedit-bukkit:7.2.14")
 
-    implementation("net.kyori:adventure-api:4.13.1")
+    implementation("net.kyori:adventure-api:4.14.0")
     implementation("net.kyori:adventure-extra-kotlin:4.13.1")
     implementation("net.kyori:adventure-platform-bukkit:4.3.0")
     implementation("net.kyori:adventure-text-minimessage:4.13.1")
