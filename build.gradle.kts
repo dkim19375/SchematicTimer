@@ -57,7 +57,7 @@ dependencies {
     compileOnly("com.destroystokyo.paper:paper-api:1.16.4-R0.1-SNAPSHOT")
 
     compileOnly("me.clip:placeholderapi:2.11.5")
-    compileOnly("org.jetbrains:annotations:24.0.1")
+    compileOnly("org.jetbrains:annotations:24.1.0")
     compileOnly("com.sk89q.worldedit:worldedit-bukkit:7.2.17")
 
     implementation("net.kyori:adventure-api:4.14.0")
